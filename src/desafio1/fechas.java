@@ -14,6 +14,7 @@ public class fechas {
         String fecha2 = sc.nextLine();
 
     // Convertimos el string a int tomando dia mes y año por separado
+
         int dia = Integer.parseInt(fecha.substring(0,2));
         int mes = Integer.parseInt(fecha.substring(3,5));
         int anno = Integer.parseInt(fecha.substring(6,10));
@@ -24,21 +25,20 @@ public class fechas {
 
         System.out.println("dia = " + dia);
         System.out.println("mes = " + mes);
-        System.out.println("ano = " + anno);
+        System.out.println("ano = " + anno + "\n");
         System.out.println("dia2 = " + dia2);
         System.out.println("mes2 = " + mes2);
-        System.out.println("ano2 = " + anno2);
+        System.out.println("ano2 = " + anno2 + "\n");
 
     //Comparando fechas
 
-        if (anno < anno2) {
-            System.out.println("La persona 1 es mayor.");
-        } else if (anno2 < anno) {
-            System.out.println("La persona 2 es mayor.");
+        if (anno < anno2 || (anno == anno2 && mes < mes2) || (anno == anno2 && mes == mes2 && dia < dia2)) {
+            System.out.println("\u001B[4mLa persona 1 es mayor.\u001B[0m\n");
+        } else if (anno2 < anno || (anno2 == anno && mes2 < mes) || (anno2 == anno && mes2 == mes && dia2 < dia)) {
+            System.out.println("\u001B[4mLa persona 2 es mayor.\u001B[0m\n");
         } else {
-            System.out.println("Tienen la misma edad.");
+            System.out.println("\u001B[4mTienen la misma edad.\u001B[0m\n");
         }
-
 
         System.out.println("fecha de la persona 1 = " + fecha);
         System.out.println("fecha de la persona 2 = " + fecha2);
