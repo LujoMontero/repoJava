@@ -21,33 +21,60 @@ public class WhileDowhile {
 
         //Ejercicio - Solo pares
 
-        System.out.println("limite de pares:");
-        int limite = sc.nextInt();
-        int contador = 0;
-            for (int i=0;contador<limite;i++){
+//        System.out.println("limite de pares:");
+//        int limite = sc.nextInt();
+//        int contador = 0;
+//            for (int i=0;contador<limite;i++){
+//
+//                if (i%2==0){
+//                    System.out.println(i);
+//                    contador++;
+//                }
+//
+//            }
+//
+//        System.out.println("-----------------------");
+//
+//        int contador2 = 0;
+//        for (int i=1;contador2<limite;i++){
+//
+//            if (i%2==0){
+//                System.out.println(i);
+//                contador2++;
+//            }
+//
+//        }
 
-                if (i%2==0){
-                    System.out.println(i);
-                    contador++;
-                }
+        //Ejercicio - Solo Impares
 
-            }
+//        System.out.println("suma de impares:");
+//        int limite = sc.nextInt();
+//
+//        int suma1=0;
+//        for (int i=0;i<=limite;i++){
+//            if (i%2!=0){
+//                suma1 +=i;
+//            }
+//        }
+//        System.out.println("Impares: "+ suma1);
+//
+//
+//        System.out.println("empezar la suma impar:");
+//        int minimo = sc.nextInt();
+//        System.out.println("hasta la suma impar:");
+//        int maximo = sc.nextInt();
+//
+//        int suma2=0;
+//
+//        for (int i2=minimo;i2<=maximo;i2++){
+//
+//            if (i2%2!=0){
+//                suma2 +=i2;
+//            }
+//        }
+//        System.out.println("Impares: "+ suma2);
 
-        System.out.println("-----------------------");
-
-        int contador2 = 0;
-        for (int i=1;contador2<limite;i++){
-
-            if (i%2==0){
-                System.out.println(i);
-                contador2++;
-            }
-
-        }
-
-
-
-
+        //Ejercicio - Secuencia de Fibonacci
 
     }
 }
