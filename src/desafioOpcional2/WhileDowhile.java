@@ -76,5 +76,19 @@ public class WhileDowhile {
 
         //Ejercicio - Secuencia de Fibonacci
 
+        System.out.println("cuanta veces quiere hacer la secuencia: ");
+        int n = sc.nextInt();
+        int primero = 0;
+        int segundo = 1;
+
+        System.out.println("Secuencia de Fibonacci:");
+        for (int i = 0; i < n; i++) {
+            System.out.println(primero);
+            int nuevo = primero + segundo;
+            primero = segundo;
+            segundo = nuevo;
+
+        }
+
     }
 }
