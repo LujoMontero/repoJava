@@ -21,16 +21,49 @@ public class patrones {
 
         //Patron 1
 
-        System.out.println("Ingresa un numero: ");
-        int numero = sc.nextInt();
-        for (int i = 0; i < numero; i++) {
+//        System.out.println("Ingresa un numero: ");
+//        int numero = sc.nextInt();
+//        for (int i = 0; i < numero; i++) {
+//
+//            if (i % 2 == 0) {
+//                System.out.print(ANSI_GREEN+"*");
+//            }else{
+//                System.out.print(ANSI_RED+".");
+//            }
+//        }
 
+        //Patron 2
+
+//        System.out.println(ANSI_YELLOW +"Hasta que numero quiere que se repita: ");
+//        int n = sc.nextInt();
+//        System.out.println(ANSI_YELLOW + "cuanta veces quiere que se repita la secuencia: ");
+//        int rep=sc.nextInt();
+//            int color = rep/2;
+//        for (int i = 0; i < rep; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                if (i <=color ) {
+//                    System.out.printf(ANSI_BLUE+"%d",j);
+//                }else {
+//                    System.out.printf(ANSI_RED + "%d", j);
+//                }
+//            }
+//        }
+
+        //Patron 3
+
+        System.out.println(ANSI_YELLOW + "ingresa un numero: ");
+        int n = sc.nextInt();
+
+        for (int i = 0; i <= n; i++) {
             if (i % 2 == 0) {
-                System.out.print(ANSI_GREEN+"*");
-            }else{
-                System.out.print(ANSI_RED+".");
+                System.out.print(ANSI_BLUE + "||");
+            } else {
+                System.out.print(ANSI_RED + "*");
             }
         }
+
+
+
 
 //        System.out.printf(ANSI_YELLOW+"Ingresa un numero: ");
 //        int n = sc.nextInt();
