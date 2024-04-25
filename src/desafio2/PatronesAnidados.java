@@ -26,32 +26,34 @@ public class PatronesAnidados {
             switch (opcion) {
                 case "1":
                     // Patrón 1
-                    System.out.printf(ANSI_YELLOW + "Ingresa un numero: ");
-                    int n = sc.nextInt();
-                    for (int i = 0; i < n; i++) {
-                        for (int j = 0; j < n; j++) {
-                            if ((i == 0 || i == n - 1) || (j == 0 || j == n - 1)) {
-                                System.out.print(ANSI_RED + "*");
-                            } else {
-                                System.out.print(" ");
-                            }
-                        }
-                        System.out.println();
-                    }
+
+                    int n1 = interacionIngresoN();
+                    patron1(n1);
                     break;
 
                 case "2":
                     // Patrón 2
 
+                    int n2 = interacionIngresoN();
+                    patron2(n2);
                     break;
 
                 case "3":
                     // Patrón 3
 
+                    int n3 = interacionIngresoN();
+                    patron3(n3);
                     break;
 
+//                case "4":
+//                    // Patrón 4
+//
+//                    int n4 = interacionIngresoN();
+//                    patron3(n4);
+//                    break;
+
                 case "0":
-                    System.out.println("Saliendo del programa...doble enter para finalizar");
+                    salida();
                     break;
             }
             sc.nextLine(); // Limpia el buffer del scanner
@@ -64,6 +66,7 @@ public class PatronesAnidados {
         System.out.println(ANSI_YELLOW + "1. Patrón 1");
         System.out.println(ANSI_BLUE + "2. Patrón 2");
         System.out.println(ANSI_BLUE + "3. Patrón 3");
+        System.out.println(ANSI_BLUE + "4. Patrón 4");
         System.out.println(ANSI_RED + "0. Salir");
         System.out.println(ANSI_RED + "Ingrese su opción: ");
     }
@@ -79,5 +82,56 @@ public class PatronesAnidados {
             opcion = sc.nextLine();
         }
         return opcion;
+    }
+
+    static public int interacionIngresoN() {
+        Scanner sc = new Scanner(System.in);
+        int numero;
+        System.out.printf(ANSI_YELLOW + "Ingresa un numero: ");
+        numero = sc.nextInt();
+        sc.nextLine();
+        return numero;
+    }
+    static public void patron1(int num){
+
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                if ((i == 0 || i == num - 1) || (j == 0 || j == num - 1)) {
+                    System.out.print(ANSI_RED + "*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static public void patron2(int num){
+
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                if (i == 0 || i == num - 1 || i + j == num - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static public void patron3(int num){
+
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                if (i == j || i + j == num - 1) {
+                    System.out.print("x");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    static public void salida(){
+        System.out.println("Saliendo del programa...doble enter para finalizar");
     }
 }
