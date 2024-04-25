@@ -16,6 +16,15 @@ public class PatronesAnidados {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        //Patrón 1
+
+        //Patrón 2
+
+        //Patrón 3
+
+        //Patrón 4
+
+
         System.out.printf(ANSI_YELLOW + "Ingresa un numero: ");
         int n = sc.nextInt();
         for (int i = 0; i < n; i++) {
