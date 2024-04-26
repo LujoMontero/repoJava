@@ -45,12 +45,12 @@ public class PatronesAnidados {
                     patron3(n3);
                     break;
 
-//                case "4":
-//                    // Patrón 4
-//
-//                    int n4 = interacionIngresoN();
-//                    patron3(n4);
-//                    break;
+                case "4":
+                    // Patrón 4
+
+                    int n4 = interacionIngresoN();
+                    patron4(n4);
+                    break;
 
                 case "0":
                     salida();
@@ -78,7 +78,7 @@ public class PatronesAnidados {
 
         while (!(opcion.equals("1") || opcion.equals("2")) && (!(opcion.equals("3") || opcion.equals("4"))) && (!opcion.equals("0"))) {
             System.out.println("no es una opcion");
-            System.out.println("vuelva ingresar una opcion valida");
+            System.out.println("vuelva ingresar una opcion valida (1,2,3,4)");
             opcion = sc.nextLine();
         }
         return opcion;
@@ -127,6 +127,19 @@ public class PatronesAnidados {
                 } else {
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+    }
+    static public void patron4(int num){
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j < num; j++) {
+                if (num ==1 ) {
+                    System.out.print("*");
+                }else if ((i == 0 && j != num - 1) || (i == num - 1 && j != 0) || !(j == 0 || j == num - 1))  {
+                    System.out.print("*");
+                }else
+                    System.out.print(" ");
             }
             System.out.println();
         }
