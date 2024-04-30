@@ -26,16 +26,21 @@ public class visitas {
         System.out.println("visita del dia de hoy: ");
         visita.add(sc.nextInt());
 
-        System.out.println("el promedio de visita por dia es: " + promedio(visita));
+        System.out.println("Para la entrada anterior, el resultado es: " + promedio(visita));
 
 
     }
     public static Integer promedio(ArrayList<Integer> visita) {
         int promedio = 0;
+        int contador = 0;
         for (int i = 0; i < visita.size(); i++) {
-            promedio += visita.get(i);
+            if (visita.get(i) >= 200 && visita.get(i) <= 100000) {
+                promedio += visita.get(i);
+                contador++;
+            }
         }
-        promedio /= visita.size();
+        promedio/=contador;
+
         return promedio;
     }
 }
