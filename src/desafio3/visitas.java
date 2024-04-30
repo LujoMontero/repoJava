@@ -17,6 +17,8 @@ public class visitas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+//        1. Ejercicio 1 - Visitas
+
         ArrayList<Integer> visita = new ArrayList<Integer>();
         visita.add(3001);
         visita.add(1402);
