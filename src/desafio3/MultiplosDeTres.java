@@ -18,8 +18,6 @@ public class MultiplosDeTres {
         tres.add(2);
         tres.add(61);
 
-//        Para la entrada anterior deberá mostrar en pantalla: 84.
-
         System.out.println("La suma de los múltiplos de tres es: " + sumaTres(tres));
 
     }
