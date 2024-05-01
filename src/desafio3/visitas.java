@@ -29,6 +29,7 @@ public class visitas {
         visita.add(sc.nextInt());
 
         System.out.println("Para la entrada anterior, el resultado es: " + promedio(visita));
+        System.out.println("visita por dias = " + visita);
 
 
     }
