@@ -27,8 +27,8 @@ public class MultTresPromedio {
         tres.add(2D);
         tres.add(61D);
 
-        System.out.println("La suma de los múltiplos de tres es: " + sumaTres(tres));
-        System.out.println("El promedio de los multiplo de tres es: " + promedioTres(tres));
+        System.out.println(ANSI_YELLOW + "La suma de los múltiplos de tres es: " + sumaTres(tres));
+        System.out.println(ANSI_BLUE + "El promedio de los multiplo de tres es: " + promedioTres(tres));
 
     }
     public static Double sumaTres (ArrayList<Double> sumat) {

@@ -25,11 +25,11 @@ public class visitas {
         visita.add(1304);
         visita.add(1505);
 
-        System.out.println("visita del dia de hoy: ");
+        System.out.println(ANSI_YELLOW + "visita del dia de hoy: ");
         visita.add(sc.nextInt());
 
-        System.out.println("Para la entrada anterior, el resultado es: " + promedio(visita));
-        System.out.println("visita por dias = " + visita);
+        System.out.println(ANSI_BLUE + "Para la entrada anterior, el resultado es: " + promedio(visita));
+        System.out.println(ANSI_RED + "visita por dias = " + visita);
 
 
     }

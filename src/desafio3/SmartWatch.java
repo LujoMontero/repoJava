@@ -29,7 +29,7 @@ public class SmartWatch {
         pasos.add(-1044);
 
         clearSteps(pasos);
-        System.out.println("Tu promedio de paso es: " + promedio(pasos));
+        System.out.println(ANSI_BLUE + "Tu promedio de paso es: " + promedio(pasos) + ANSI_RESET);
 
     }
     
@@ -40,7 +40,7 @@ public class SmartWatch {
                 pasoC.remove(i);
             }
         }
-        System.out.println("Array limpio = " + pasoC);
+        System.out.println(ANSI_YELLOW + "Array limpio = " + pasoC);
     }
     
     public static Integer promedio(ArrayList<Integer> pasosP) {

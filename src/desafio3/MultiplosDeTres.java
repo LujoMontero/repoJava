@@ -27,7 +27,9 @@ public class MultiplosDeTres {
         tres.add(2);
         tres.add(61);
 
-        System.out.println("La suma de los múltiplos de tres es: " + sumaTres(tres));
+        System.out.println(ANSI_YELLOW + "Agregar un numero mas: ");
+        tres.add(sc.nextInt());
+        System.out.println(ANSI_BLUE + "La suma de los múltiplos de tres es: " + sumaTres(tres));
 
     }
     public static Integer sumaTres (ArrayList<Integer> sumat) {
