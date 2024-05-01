@@ -11,6 +11,7 @@ public class SmartWatch {
 
         ArrayList<Integer> pasos = new ArrayList<Integer>();
         pasos.add(300);
+        pasos.add(155000);
         pasos.add(405);
         pasos.add(403);
         pasos.add(506);
@@ -28,6 +29,7 @@ public class SmartWatch {
         for (int i = 0; i < pasoC.size(); i++) {
             if (pasoC.get(i) <= 200 || pasoC.get(i) >= 100000) {
                 pasoC.remove(i);
+
             }
         }
         System.out.println("Array limpio = " + pasoC);
