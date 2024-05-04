@@ -18,7 +18,7 @@ public class Escrituraylectura {
     public static void main(String[] args) throws IOException {
         //es el metodo creado createDirectory();
         createDirectory("diretory");
-        createArchivos("diretory/texto.txt");
+        createArchivos("diretory/fichero.txt");
     }
 
     public static void createDirectory(String dir) throws IOException {
@@ -26,19 +26,19 @@ public class Escrituraylectura {
         File directory = new File("src/"+dir);
         if (!directory.exists()) {
             directory.mkdir();
-            System.out.println("File created successfully");
+            System.out.println(ANSI_YELLOW + "File created successfully");
 
         }else{
-            System.out.println("Directory already exists");
+            System.out.println(ANSI_YELLOW + "Directory already exists");
         }
     }
     public static void createArchivos(String archivo) throws IOException {
         File file = new File("src/" + archivo);
         if (!file.exists()) {
             file.createNewFile();
-            System.out.println("Archivo created successfully");
+            System.out.println(ANSI_BLUE + "Archivo created successfully");
         } else {
-            System.out.println("Archivo already exists");
+            System.out.println(ANSI_BLUE + "Archivo already exists");
         }
     }
 }
