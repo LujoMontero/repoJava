@@ -2,6 +2,7 @@ package desafio4;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class Escrituraylectura {
@@ -16,29 +17,40 @@ public class Escrituraylectura {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     public static void main(String[] args) throws IOException {
-        //es el metodo creado createDirectory();
-        createDirectory("diretory");
-        createArchivos("diretory/fichero.txt");
-    }
 
+        String directorio = "directory";
+        String archivo = "texto.txt";
+
+        ArrayList<String> lista = new ArrayList<String>();
+        lista.add("Perro");
+        lista.add("Gato");
+        lista.add("Juan");
+        lista.add("Daniel");
+        lista.add("Juan");
+        lista.add("Gato");
+        lista.add("Perro");
+        lista.add("Camila");
+        lista.add("Daniel");
+        lista.add("Camila");
+    }
     public static void createDirectory(String dir) throws IOException {
         //crea el directorio
         File directory = new File("src/"+dir);
         if (!directory.exists()) {
             directory.mkdir();
-            System.out.println(ANSI_YELLOW + "File created successfully");
+            System.out.println("File created successfully");
 
         }else{
-            System.out.println(ANSI_YELLOW + "Directory already exists");
+            System.out.println("Directory already exists");
         }
     }
     public static void createArchivos(String archivo) throws IOException {
         File file = new File("src/" + archivo);
         if (!file.exists()) {
             file.createNewFile();
-            System.out.println(ANSI_BLUE + "Archivo created successfully");
+            System.out.println("Archivo created successfully");
         } else {
-            System.out.println(ANSI_BLUE + "Archivo already exists");
+            System.out.println("Archivo already exists");
         }
     }
 }

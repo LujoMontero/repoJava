@@ -19,7 +19,8 @@ public class Archivo {
 	public static void crearFile() {
 
 		File directorio = new File("src/carpeta");  
-		File archivo = new File("src/carpeta/texto.txt");  
+		File archivo = new File("src/carpeta/texto.txt");
+//		File archivo2 = new File("src/carpeta/fichero.txt");
 
 		if (!directorio.exists()) {
 			if (directorio.mkdirs()) {
