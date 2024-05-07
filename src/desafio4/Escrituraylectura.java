@@ -1,9 +1,10 @@
 package desafio4;
-
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.Iterator;
 
 public class Escrituraylectura {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -16,10 +17,13 @@ public class Escrituraylectura {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
+
     public static void main(String[] args) throws IOException {
 
-        String directorio = "directory";
-        String archivo = "texto.txt";
+        String directorio = "src/miDirectory";
+        String fichero = "fichero.txt";
+
+        crearArchivo(directorio, fichero);
 
         ArrayList<String> lista = new ArrayList<String>();
         lista.add("Perro");
@@ -32,25 +36,50 @@ public class Escrituraylectura {
         lista.add("Camila");
         lista.add("Daniel");
         lista.add("Camila");
-    }
-    public static void createDirectory(String dir) throws IOException {
-        //crea el directorio
-        File directory = new File("src/"+dir);
-        if (!directory.exists()) {
-            directory.mkdir();
-            System.out.println("File created successfully");
 
-        }else{
-            System.out.println("Directory already exists");
+        escribirEnArchivo(directorio + "/" + fichero, lista);
+
+    }
+
+    public static void crearArchivo(String directorio, String fichero) throws IOException {
+        crearDirectorio(directorio);
+
+        File archivo = new File(directorio + "/" + fichero);
+
+        if (!archivo.exists()) {
+            archivo.createNewFile();
+            System.out.println("El fichero se ha creado correctamente.");
+        } else if(archivo.exists()){
+            System.out.println("El fichero ya existe.");
+        }else {
+            System.out.println("Error al crear directorio");
         }
     }
-    public static void createArchivos(String archivo) throws IOException {
-        File file = new File("src/" + archivo);
-        if (!file.exists()) {
-            file.createNewFile();
-            System.out.println("Archivo created successfully");
+
+    public static void crearDirectorio(String nombre) {
+        File directorio = new File(nombre);
+
+        if (!directorio.exists()) {
+            directorio.mkdirs();
+            System.out.println("El directorio se ha creado correctamente.");
         } else {
-            System.out.println("Archivo already exists");
+            System.out.println("El directorio ya está creado.");
+        }
+    }
+    public static void escribirEnArchivo(String archivo, ArrayList<String> lista) {
+        try {
+            FileWriter fw = new FileWriter(archivo);
+            BufferedWriter bw = new BufferedWriter(fw);
+            Iterator<String> iterator = lista.iterator();
+            while (iterator.hasNext()) {
+                String linea = iterator.next();
+                bw.write(linea);
+                bw.newLine();
+            }
+            bw.close();
+            System.out.println("Contenido agregado al archivo correctamente.");
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo.");
         }
     }
 }
