@@ -1,8 +1,5 @@
 package desafio4;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -37,7 +34,19 @@ public class Escrituraylectura {
         lista.add("Daniel");
         lista.add("Camila");
 
-        escribirEnArchivo(directorio + "/" + fichero, lista);
+
+            FileWriter fw = new FileWriter("src/miDirectory/fichero.txt");
+            BufferedWriter bw = new BufferedWriter(fw);
+            Iterator<String> iterator = lista.iterator();
+            while (iterator.hasNext()) {
+                String linea = iterator.next();
+                bw.write(linea);
+                bw.newLine();
+            }
+            bw.close();
+            System.out.println("Contenido agregado al archivo correctamente.");
+
+        buscarTexto("fichero.txt", "perro");
 
     }
 
@@ -66,20 +75,26 @@ public class Escrituraylectura {
             System.out.println("El directorio ya está creado.");
         }
     }
-    public static void escribirEnArchivo(String archivo, ArrayList<String> lista) {
-        try {
-            FileWriter fw = new FileWriter(archivo);
-            BufferedWriter bw = new BufferedWriter(fw);
-            Iterator<String> iterator = lista.iterator();
-            while (iterator.hasNext()) {
-                String linea = iterator.next();
-                bw.write(linea);
-                bw.newLine();
-            }
-            bw.close();
-            System.out.println("Contenido agregado al archivo correctamente.");
-        } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo.");
+    public static void buscarTexto(String nombreFichero, String texto) throws IOException {
+
+        File archivo = new File(nombreFichero);
+
+        if (!archivo.exists()) {
+            System.out.println("El fichero ingresado no existe");
+            return;
         }
+            BufferedReader br = new BufferedReader(new FileReader(archivo));
+            String linea;
+            int contador = 0;
+            while ((linea = br.readLine()) != null) {
+                if (linea.contains(texto)) {
+                    contador++;
+                }
+            }
+            br.close();
+            System.out.println("si se encuentra:" + texto );
+        System.out.println("la cantidad de veces que aparece en el fichero es: " + contador);
+
     }
+
 }
