@@ -93,7 +93,7 @@ public class Escrituraylectura {
             }
             br.close();
             System.out.println("si se encuentra:" + texto );
-        System.out.println("la cantidad de veces que aparece en el fichero es: " + contador);
+        System.out.println("cantidad de repeticiones del texto -> " + contador);
 
     }
 
