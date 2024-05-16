@@ -29,4 +29,8 @@ public class MiniBus extends Bus {
                 "tipoViaje='" + tipoViaje + '\'' +
                 "} " + super.toString();
     }
+
+    public void imprimeBus() {
+        System.out.println(this.toString());
+    }
 }
