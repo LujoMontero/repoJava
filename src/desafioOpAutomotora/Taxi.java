@@ -29,4 +29,17 @@ public class Taxi extends Vehiculo {
                 "valorPasaje=" + valorPasaje +
                 "} " + super.toString();
     }
+
+    public int pagarPasaje(int montoCliente) {
+        int vuelto=0;
+        if (montoCliente>=valorPasaje){
+            vuelto = montoCliente - valorPasaje;
+            System.out.println("Pago realizado su Vuelto es: " + vuelto);
+            return vuelto;
+        } else {
+            System.out.println("Monto insuficiente. " +montoCliente+ " El pago total es: "+ valorPasaje);
+            return valorPasaje;
+        }
+
+    }
 }

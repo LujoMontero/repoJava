@@ -2,7 +2,7 @@ package desafioOpAutomotora;
 
 public class MainAutomotora {
     public static void main(String[] args) {
-        Tienda tienda = new Tienda();
+/*        Tienda tienda = new Tienda();
         tienda.existeStock();
 
         MiniBus minibus = new MiniBus("corto");
@@ -32,6 +32,10 @@ public class MainAutomotora {
         System.out.println("vendedor2 = " + vendedor2);
         Tienda tienda1 = new Tienda(vendedor,cliente2,22);
         System.out.println("tienda1 = " + tienda1);
+*/
+
+            Taxi taxi = new Taxi(2500);
+            taxi.pagarPasaje(1000);
 
 
     }
