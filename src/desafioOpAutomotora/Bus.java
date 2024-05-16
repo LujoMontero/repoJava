@@ -29,4 +29,7 @@ public class Bus extends Vehiculo {
                 "cantidadDeAsiento=" + cantidadDeAsiento +
                 "} " + super.toString();
     }
+    public int asientosDisponibles(int cantidadDeAsiento) {
+        return cantidadDeAsiento;
+    }
 }
