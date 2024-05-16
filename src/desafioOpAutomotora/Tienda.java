@@ -38,9 +38,6 @@ public class Tienda {
         this.stock = stock;
     }
 
-    public void existeStock(){
-        System.out.println("no sabemos");
-    }
 
     @Override
     public String toString() {
@@ -49,5 +46,8 @@ public class Tienda {
                 ", cliente=" + cliente +
                 ", stock=" + stock +
                 '}';
+    }
+    public void existeStock(){
+        System.out.println("Cantidad de stock es: "+ stock);
     }
 }

@@ -13,5 +13,9 @@ public class MainAutomotora {
         MiniBus miniBus = new MiniBus("Azul", "XYZ123", 30, "Turismo");
         miniBus.imprimeBus();
 
+        Tienda tienda = new Tienda();
+        tienda.setStock(33);
+        tienda.existeStock();
+
     }
 }
