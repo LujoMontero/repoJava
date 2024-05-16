@@ -3,12 +3,12 @@ package desafioOpAutomotora;
 public class Tienda {
     private Vendedor vendedor;
     private Cliente cliente;
-    private System stock;
+    private int stock;
 
     public Tienda() {
     }
 
-    public Tienda(Vendedor vendedor, Cliente cliente, System stock) {
+    public Tienda(Vendedor vendedor, Cliente cliente, int stock) {
         this.vendedor = vendedor;
         this.cliente = cliente;
         this.stock = stock;
@@ -30,11 +30,11 @@ public class Tienda {
         this.cliente = cliente;
     }
 
-    public System getStock() {
+    public int getStock() {
         return stock;
     }
 
-    public void setStock(System stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 
