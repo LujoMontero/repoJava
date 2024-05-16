@@ -29,7 +29,16 @@ public class Bus extends Vehiculo {
                 "cantidadDeAsiento=" + cantidadDeAsiento +
                 "} " + super.toString();
     }
-    public int asientosDisponibles(int cantidadDeAsiento) {
-        return cantidadDeAsiento;
+    public void asientosDisponibles(int asientos) {
+        int disponibleRestantes=0;
+        if(asientos<cantidadDeAsiento){
+            disponibleRestantes = cantidadDeAsiento - asientos;
+            System.out.println("Asientos disponibles restantes = " + disponibleRestantes);
+        } else {
+            System.out.println("no tenemos disponibilidad para= " + asientos + ". Solo hay capacidad para= " + cantidadDeAsiento);
+        }
+
+
+
     }
 }

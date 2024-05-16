@@ -7,7 +7,7 @@ public class MainAutomotora {
         taxi.pagarPasaje(1000);
 
         Bus bus = new Bus(10);
-
+        bus.asientosDisponibles(13);
 
     }
 }
