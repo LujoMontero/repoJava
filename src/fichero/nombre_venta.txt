@@ -1,0 +1,4 @@
+Patente del vehículo: cvbghj
+Edad del cliente: 30
+Fecha de la venta (DDMMYYYY): 14092024
+Nombre de la venta: Venta1
