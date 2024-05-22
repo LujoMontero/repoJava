@@ -46,12 +46,13 @@ public class LibroVenta {
 
     public void guardarVenta(Cliente cliente, Vehiculo vehiculo, String directorio, String fichero) throws IOException {
 
+        int fecha2 = Integer.parseInt(fechaVenta);
         File archivo = new File(directorio, fichero);
 
         try (BufferedWriter texto = new BufferedWriter(new FileWriter(archivo))) {
             texto.write("Patente del vehículo: " + vehiculo.getPatente() + "\n");
             texto.write("Edad del cliente: " + cliente.getEdad() + "\n");
-            texto.write("Fecha de la venta (DDMMYYYY): " + fechaVenta + "\n");
+            texto.write("Fecha de la venta (DDMMYYYY): " + fecha2 + "\n");
             texto.write("Nombre de la venta: " + nombreVenta + "\n");
             System.out.println("El archivo se ha creado correctamente.");
         } catch (IOException e) {
