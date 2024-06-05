@@ -27,11 +27,16 @@ public class ProductoServicio {
                 '}';
     }
     public void listarProductos() {
-        for (Producto producto : listaProductos) {
-            System.out.println(producto);
+        if (listaProductos.isEmpty()) {
+            System.out.println("No hay productos en la lista.");
+        } else {
+            for (Producto producto : listaProductos) {
+                System.out.println(producto);
+            }
         }
     }
     public void agregarProducto(Producto producto) {
         listaProductos.add(producto);
+        System.out.println("Producto agregado exitosamente.");
     }
 }
