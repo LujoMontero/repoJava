@@ -3,9 +3,10 @@ package DesafioTiendaIndianaJeans;
 import java.util.ArrayList;
 
 public class ProductoServicio {
-    ArrayList<Producto> listaProductos;
+    private ArrayList<Producto> listaProductos;
 
     public ProductoServicio() {
+        this.listaProductos = new ArrayList<>();
     }
 
     public ProductoServicio(ArrayList<Producto> listaProductos) {
@@ -20,12 +21,7 @@ public class ProductoServicio {
         this.listaProductos = listaProductos;
     }
 
-    @Override
-    public String toString() {
-        return "ProductoServicio{" +
-                "listaProductos=" + listaProductos +
-                '}';
-    }
+
     public void listarProductos() {
         if (listaProductos.isEmpty()) {
             System.out.println("No hay productos en la lista.");

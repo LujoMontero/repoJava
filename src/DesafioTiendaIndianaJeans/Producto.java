@@ -3,7 +3,7 @@ package DesafioTiendaIndianaJeans;
 public class Producto {
     private String articulo;
     private String precio;
-    private String descripçion;
+    private String descripcion;
     private String codigo;
     private String talla;
     private String marca;
@@ -12,10 +12,10 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(String articulo, String precio, String descripçion, String codigo, String talla, String marca, String color) {
+    public Producto(String articulo, String precio, String descripcion, String codigo, String talla, String marca, String color) {
         this.articulo = articulo;
         this.precio = precio;
-        this.descripçion = descripçion;
+        this.descripcion = descripcion;
         this.codigo = codigo;
         this.talla = talla;
         this.marca = marca;
@@ -38,12 +38,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public String getDescripçion() {
-        return descripçion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescripçion(String descripçion) {
-        this.descripçion = descripçion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getCodigo() {
@@ -78,16 +78,10 @@ public class Producto {
         this.color = color;
     }
 
+
     @Override
     public String toString() {
-        return "Producto{" +
-                "articulo='" + articulo + '\'' +
-                ", precio='" + precio + '\'' +
-                ", descripçion='" + descripçion + '\'' +
-                ", codigo='" + codigo + '\'' +
-                ", talla='" + talla + '\'' +
-                ", marca='" + marca + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Producto [articulo=" + articulo + ", precio=" + precio + ", descripcion=" + descripcion + ", codigo="
+                + codigo + ", talla=" + talla + ", marca=" + marca + ", color=" + color + "]";
     }
 }
