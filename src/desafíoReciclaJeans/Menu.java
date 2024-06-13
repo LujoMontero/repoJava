@@ -29,9 +29,10 @@ public class Menu {
         boolean salir = false;
         while (!salir) {
             System.out.println("1 --> Listar Producto");
-            System.out.println("2 --> Agregar Producto");
-            System.out.println("3 --> Exportar Datos");
-            System.out.println("4 --> Salir");
+            System.out.println("2 --> Editar Datos");
+            System.out.println("3 --> Importar Datos");
+            System.out.println("4 --> Limpiar Pantalla");
+            System.out.println("5 --> Salir");
             System.out.print("Ingrese una opción: ");
 
             String input = sc.nextLine();
@@ -76,7 +77,12 @@ public class Menu {
                     String filePath = sc.nextLine();
                     exportadorTxt.exportar(productoServicio.getListaProductos(), filePath);
                     break;
+
                 case 4:
+                    limpiarPantalla();
+                    break;
+                case 5:
+                    System.out.print("Abandonando el sistema de clientes...\n" + "Acaba de salir del sistema");
                     salir = true;
                     break;
             }
