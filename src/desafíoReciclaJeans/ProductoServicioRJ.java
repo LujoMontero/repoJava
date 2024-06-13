@@ -1,7 +1,5 @@
 package desafíoReciclaJeans;
 
-import DesafioTiendaIndianaJeans.Producto;
-
 import java.util.ArrayList;
 
 public class ProductoServicioRJ {

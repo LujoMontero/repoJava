@@ -1,8 +1,5 @@
 package desafíoReciclaJeans;
 
-import DesafioTiendaIndianaJeans.Producto;
-import DesafioTiendaIndianaJeans.ProductoServicio;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,7 +20,27 @@ public class MenuRJ {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ProductoServicioRJ productoServicio = new ProductoServicioRJ();
+        ArrayList<ProductoRJ> listaProductos = new ArrayList<>();
+
+        ProductoServicioRJ productoServicio = new ProductoServicioRJ(listaProductos);
+
+        productoServicio.agregarProducto(new ProductoRJ(
+                "Jean",
+                "1500",
+                "Es un Jean muy lindo con hermosos detalles",
+                "15000",
+                "42",
+                "Levis",
+                "Azul Marino"));
+
+        productoServicio.agregarProducto(new ProductoRJ(
+                "Jean",
+                "1501",
+                "Es un Jean caro pero hermoso hermoso",
+                "25000",
+                "46",
+                "IndianaJeans",
+                "Blanco"));
 
         ArchivoServicioRJ archivoServicio = new ArchivoServicioRJ();
 

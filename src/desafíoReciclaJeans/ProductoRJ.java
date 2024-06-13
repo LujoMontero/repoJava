@@ -80,14 +80,14 @@ public class ProductoRJ {
 
     @Override
     public String toString() {
-        return "Producto{" +
-                "articulo='" + articulo + '\'' +
-                ", precio='" + precio + '\'' +
-                ", descripcion='" + descripcion + '\'' +
-                ", codigo='" + codigo + '\'' +
-                ", talla='" + talla + '\'' +
-                ", marca='" + marca + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "\nPRODUCTOS\n" +
+                "Nombre del articulo = " + articulo  +"\n"+
+                "Codigo = " + codigo  +"\n"+
+                "Marca = " + marca  +"\n"+
+                "Color = " + color+"\n"+
+                "Descripcion = " + descripcion  +"\n"+
+                "Precio = " + precio  +"\n"+
+                "Talla = " + talla +"\n\n"+
+                "---------------------------------------------------\n";
     }
 }
