@@ -1,14 +1,14 @@
 package desafíoReciclaJeans;
 
-import DesafioTiendaIndianaJeans.ExportadorTxt;
 import DesafioTiendaIndianaJeans.Producto;
 import DesafioTiendaIndianaJeans.ProductoServicio;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import static DesafioTiendaIndianaJeans.Utilidad.limpiarPantalla;
 
-public class Menu {
+public class MenuRJ {
 
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
@@ -23,10 +23,12 @@ public class Menu {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        DesafioTiendaIndianaJeans.ProductoServicio productoServicio = new ProductoServicio();
-        ExportadorTxt exportadorTxt = new ExportadorTxt();
+        ProductoServicioRJ productoServicio = new ProductoServicioRJ();
+
+        ArchivoServicioRJ archivoServicio = new ArchivoServicioRJ();
 
         boolean salir = false;
+
         while (!salir) {
             System.out.println("1 --> Listar Producto");
             System.out.println("2 --> Editar Datos");
@@ -54,28 +56,34 @@ public class Menu {
                     productoServicio.listarProductos();
                     break;
                 case 2:
-                    System.out.print("Ingresar nombre articulo: ");
-                    String articulo = sc.nextLine();
-                    System.out.print("Ingresar precio: ");
-                    String precio = sc.nextLine();
-                    System.out.print("Ingresar descripción: ");
-                    String descripcion = sc.nextLine();
-                    System.out.print("Ingresar código: ");
+                    System.out.print("Ingrese el código del producto a editar: ");
                     String codigo = sc.nextLine();
-                    System.out.print("Ingresar talla: ");
-                    String talla = sc.nextLine();
-                    System.out.print("Ingresar marca: ");
-                    String marca = sc.nextLine();
-                    System.out.print("Ingresar color: ");
-                    String color = sc.nextLine();
-
-                    DesafioTiendaIndianaJeans.Producto producto = new Producto(articulo, precio, descripcion, codigo, talla, marca, color);
-                    productoServicio.agregarProducto(producto);
+                    ProductoRJ producto = productoServicio.getListaProductos().stream()
+                            .filter(p -> p.getCodigo().equals(codigo))
+                            .findFirst()
+                            .orElse(null);
+                    if (producto != null) {
+                        System.out.println("1.-El nombre del articulo actual es: " + producto.getArticulo());
+                        System.out.println("2.-El código del producto: " + producto.getCodigo());
+                        System.out.println("3.-El color del producto: " + producto.getColor());
+                        System.out.println("4.-La descripción del producto: " + producto.getDescripcion());
+                        System.out.println("5.-La marca del producto: " + producto.getMarca());
+                        System.out.println("6.-El precio del producto: " + producto.getPrecio());
+                        System.out.println("7.-La talla del producto: " + producto.getTalla());
+                        System.out.print("Ingrese la opción a editar de los datos del producto: ");
+                        int opcionEditar = Integer.parseInt(sc.nextLine());
+                        System.out.print("Ingrese el nuevo valor: ");
+                        String nuevoValor = sc.nextLine();
+                        productoServicio.editarProducto(codigo, opcionEditar, nuevoValor);
+                    } else {
+                        System.out.println("Producto con código " + codigo + " no encontrado.");
+                    }
                     break;
                 case 3:
-                    System.out.print("Ingrese el nombre del archivo para exportar los datos (con extensión .txt): ");
+                    System.out.print("Ingrese la ruta del archivo para importar los datos (con extensión .csv): ");
                     String filePath = sc.nextLine();
-                    exportadorTxt.exportar(productoServicio.getListaProductos(), filePath);
+                    ArrayList<ProductoRJ> productosImportados = archivoServicio.cargarDatos(filePath);
+                    productoServicio.setListaProductos(productosImportados);
                     break;
 
                 case 4:

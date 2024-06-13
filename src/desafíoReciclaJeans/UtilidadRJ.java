@@ -1,6 +1,6 @@
 package desafíoReciclaJeans;
 
-public class Utilidad {
+public class UtilidadRJ {
     public static void limpiarPantalla() {
 
         for (int i = 0; i < 50; i++) {

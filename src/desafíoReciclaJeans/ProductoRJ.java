@@ -1,6 +1,6 @@
 package desafíoReciclaJeans;
 
-public class Producto {
+public class ProductoRJ {
     private String articulo;
     private String precio;
     private String descripcion;
@@ -9,10 +9,10 @@ public class Producto {
     private String marca;
     private String color;
 
-    public Producto() {
+    public ProductoRJ() {
     }
 
-    public Producto(String articulo, String precio, String descripcion, String codigo, String talla, String marca, String color) {
+    public ProductoRJ(String articulo, String precio, String descripcion, String codigo, String talla, String marca, String color) {
         this.articulo = articulo;
         this.precio = precio;
         this.descripcion = descripcion;
