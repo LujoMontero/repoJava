@@ -21,6 +21,7 @@ public class Menu {
             System.out.print("Ingrese una opción: ");
 
             String input = sc.nextLine();
+
             int opcion = -1;
 
             try {
