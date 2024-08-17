@@ -82,7 +82,7 @@ public class WhileDowhile {
         int segundo = 1;
 
         System.out.println("Secuencia de Fibonacci:");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             System.out.println(primero);
             int nuevo = primero + segundo;
             primero = segundo;
